@@ -1,0 +1,44 @@
+@use '../../styles/variables' as *;
+
+.browser-view {
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+  background-color: $govuk-grey-light;
+  border-right: 1px solid $govuk-grey-mid;
+  min-width: 0;
+
+  &__url-bar {
+    padding: $spacing-2;
+    background-color: $govuk-white;
+    border-bottom: 1px solid $govuk-grey-mid;
+    flex-shrink: 0;
+  }
+
+  &__url-input {
+    width: 100%;
+    background-color: $govuk-grey-light;
+    border: 1px solid $govuk-grey-mid;
+    color: $govuk-grey-dark;
+    padding: $spacing-2;
+    font-size: $font-size-s;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+
+    &:focus {
+      outline: $focus-width solid $focus-colour;
+      outline-offset: 0;
+    }
+  }
+
+  &__viewport {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__webview {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}

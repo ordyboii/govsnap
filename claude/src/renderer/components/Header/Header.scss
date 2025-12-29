@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+
+.header {
+  background-color: $govuk-blue;
+  color: $govuk-white;
+  padding: $spacing-2 $spacing-4;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: 700;
+    margin: 0;
+  }
+}

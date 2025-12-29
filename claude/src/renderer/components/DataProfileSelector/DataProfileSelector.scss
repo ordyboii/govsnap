@@ -1,0 +1,18 @@
+@use '../../styles/variables' as *;
+@use '../../styles/accessibility' as *;
+
+.data-profile-selector {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacing-4;
+
+  &__label {
+    font-weight: 700;
+    margin-bottom: $spacing-1;
+    font-size: $font-size-l;
+  }
+
+  &__select {
+    @extend %select-base;
+  }
+}

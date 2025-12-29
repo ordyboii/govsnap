@@ -1,0 +1,26 @@
+@use '../../styles/variables' as *;
+@use '../../styles/accessibility' as *;
+
+.action-block {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2;
+
+  &__button {
+    @extend %button-base;
+    width: 100%;
+    color: $govuk-white;
+
+    &--primary {
+      background-color: $govuk-green;
+    }
+
+    &--secondary {
+      background-color: $govuk-grey-dark;
+    }
+
+    &--final {
+      background-color: $govuk-blue;
+    }
+  }
+}

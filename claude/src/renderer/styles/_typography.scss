@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+.text-xl {
+  font-size: $font-size-xl;
+  line-height: $line-height;
+}
+
+.text-l {
+  font-size: $font-size-l;
+  line-height: $line-height;
+}
+
+.text-m {
+  font-size: $font-size-m;
+  line-height: $line-height;
+}
+
+.text-s {
+  font-size: $font-size-s;
+  line-height: $line-height;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-secondary {
+  color: $govuk-grey-dark;
+}

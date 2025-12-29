@@ -1,0 +1,19 @@
+@use 'variables' as *;
+@use 'base';
+@use 'typography';
+@use 'accessibility';
+
+// App container
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+// Main content area
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}

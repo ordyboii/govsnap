@@ -1,0 +1,62 @@
+// ===========================================
+// GOV.UK COLOR PALETTE
+// ===========================================
+
+// Primary colours
+$govuk-blue: #1d70b8;
+$govuk-green: #00703c;
+$govuk-red: #d4351c;
+
+// Neutral colours
+$govuk-black: #0b0c0c;
+$govuk-grey-dark: #505a5f;
+$govuk-grey-mid: #b1b4b6;
+$govuk-grey-light: #f3f2f1;
+$govuk-white: #ffffff;
+
+// Focus colour
+$govuk-yellow: #ffdd00;
+
+// Tag colours
+$govuk-tag-green-bg: #cce2d8;
+$govuk-tag-green-text: #005a30;
+$govuk-tag-grey-bg: #eeefef;
+$govuk-tag-grey-text: #383f43;
+
+// ===========================================
+// TYPOGRAPHY
+// ===========================================
+
+$font-family: "GDS Transport", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-size-xl: 24px;
+$font-size-l: 19px;
+$font-size-m: 16px;
+$font-size-s: 14px;
+$line-height: 1.5;
+
+// ===========================================
+// SPACING
+// ===========================================
+
+$spacing-1: 5px;
+$spacing-2: 10px;
+$spacing-3: 15px;
+$spacing-4: 20px;
+$spacing-5: 25px;
+$spacing-6: 30px;
+
+// ===========================================
+// LAYOUT
+// ===========================================
+
+$header-height: 60px;
+$border-radius: 0;
+$border-radius-button: 0;
+
+// ===========================================
+// ACCESSIBILITY
+// ===========================================
+
+$focus-width: 3px;
+$focus-colour: $govuk-yellow;
+$min-touch-target: 44px;

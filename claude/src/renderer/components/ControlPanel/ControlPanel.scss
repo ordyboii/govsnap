@@ -1,0 +1,89 @@
+@use '../../styles/variables' as *;
+@use '../../styles/accessibility' as *;
+
+.control-panel {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  background-color: $govuk-white;
+  min-width: 300px;
+  max-width: 400px;
+  height: 100%;
+  overflow: hidden;
+
+  &__top {
+    flex-shrink: 0;
+    padding: $spacing-4;
+    padding-bottom: 0;
+  }
+
+  &__middle {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0 $spacing-4;
+    min-height: 0;
+  }
+
+  &__bottom {
+    flex-shrink: 0;
+    padding: $spacing-4;
+    border-top: 1px solid $govuk-grey-mid;
+    background-color: $govuk-white;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__heading {
+    font-size: $font-size-xl;
+    font-weight: 700;
+    margin-bottom: $spacing-2;
+    color: $govuk-black;
+
+    &--small {
+      font-size: $font-size-l;
+    }
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacing-4;
+  }
+
+  &__label {
+    font-weight: 700;
+    margin-bottom: $spacing-1;
+    font-size: $font-size-l;
+  }
+
+  &__input {
+    @extend %input-base;
+  }
+
+  &__journey-log-container {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    padding-right: $spacing-1;
+
+    // Custom scrollbar
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $govuk-grey-light;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $govuk-grey-mid;
+      border-radius: 4px;
+    }
+  }
+}

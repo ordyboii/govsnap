@@ -1,0 +1,99 @@
+@use '../../styles/variables' as *;
+
+.journey-log {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__empty {
+    background-color: $govuk-grey-light;
+    padding: $spacing-5 $spacing-4;
+    text-align: center;
+    border: 1px dashed $govuk-grey-mid;
+    color: $govuk-grey-dark;
+
+    p:first-child {
+      font-weight: 700;
+      margin-bottom: $spacing-1;
+    }
+  }
+
+  &__empty-hint {
+    font-size: $font-size-s;
+  }
+
+  &__item {
+    padding: $spacing-2;
+    background-color: $govuk-grey-light;
+    margin-bottom: $spacing-1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:focus-within {
+      outline: $focus-width solid $focus-colour;
+    }
+  }
+
+  &__item-content {
+    display: flex;
+    align-items: flex-start;
+    min-width: 0;
+    flex: 1;
+  }
+
+  &__item-number {
+    font-weight: 700;
+    margin-right: $spacing-1;
+    flex-shrink: 0;
+  }
+
+  &__item-details {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &__item-title {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: $font-size-l;
+  }
+
+  &__item-filename {
+    font-size: $font-size-s;
+    color: $govuk-grey-dark;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  // GOV.UK Tag component styles
+  &__tag {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: $font-size-s;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+    margin-left: $spacing-2;
+
+    &--green {
+      background-color: $govuk-tag-green-bg;
+      color: $govuk-tag-green-text;
+    }
+
+    &--grey {
+      background-color: $govuk-tag-grey-bg;
+      color: $govuk-tag-grey-text;
+    }
+
+    &--red {
+      background-color: #f6d7d2;
+      color: $govuk-red;
+    }
+  }
+}

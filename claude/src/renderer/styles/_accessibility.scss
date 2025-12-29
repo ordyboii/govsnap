@@ -1,0 +1,99 @@
+@use 'variables' as *;
+
+// Visually hidden - accessible to screen readers only
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// Focus mixin
+@mixin focus-visible {
+  &:focus {
+    outline: $focus-width solid $focus-colour;
+    outline-offset: 0;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: $focus-width solid $focus-colour;
+    outline-offset: 0;
+  }
+}
+
+// Button base
+%button-base {
+  display: inline-block;
+  min-height: $min-touch-target;
+  padding: $spacing-2 $spacing-4;
+  font-family: inherit;
+  font-size: $font-size-l;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: $border-radius-button;
+  cursor: pointer;
+
+  @include focus-visible;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  &:active {
+    filter: brightness(0.85);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Input base
+%input-base {
+  width: 100%;
+  padding: $spacing-2;
+  font-family: inherit;
+  font-size: $font-size-l;
+  line-height: $line-height;
+  border: 2px solid $govuk-black;
+  border-radius: $border-radius;
+
+  @include focus-visible;
+
+  &::placeholder {
+    color: $govuk-grey-dark;
+  }
+}
+
+// Select base
+%select-base {
+  width: 100%;
+  padding: $spacing-2;
+  padding-right: 36px;
+  font-family: inherit;
+  font-size: $font-size-l;
+  line-height: $line-height;
+  border: 2px solid $govuk-black;
+  border-radius: $border-radius;
+  background-color: $govuk-white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%230b0c0c' d='M1.41 0L6 4.59 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  appearance: none;
+  cursor: pointer;
+
+  @include focus-visible;
+}

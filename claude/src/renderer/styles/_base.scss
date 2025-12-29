@@ -1,0 +1,61 @@
+@use 'variables' as *;
+
+// Box sizing reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: $font-size-l;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size-l;
+  line-height: $line-height;
+  color: $govuk-black;
+  background-color: $govuk-white;
+  overflow: hidden;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: $spacing-2;
+}
+
+h1 {
+  font-size: $font-size-xl;
+}
+
+h2 {
+  font-size: $font-size-xl;
+}
+
+// Links
+a {
+  color: $govuk-blue;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration-thickness: 3px;
+  }
+
+  &:focus {
+    outline: $focus-width solid $focus-colour;
+    outline-offset: 0;
+    background-color: $focus-colour;
+    text-decoration: none;
+  }
+}
+
+// Lists
+ul, ol {
+  list-style: none;
+}
